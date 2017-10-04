@@ -6,6 +6,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    //cambios
     CiA402DeviceICanbus com;
     can_msg can_in,can;
     co_msg input, output;
