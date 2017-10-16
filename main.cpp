@@ -7,13 +7,13 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     //cambios
-    CiA402DeviceICanbus com;
+    CiA402DeviceICanbus com;//0x22,0x64,0x60,0x00,0x0F,0x00,0x00,0x00
     can_msg can_in,can;
     co_msg input, output;
-    uint8_t msg_start[]={0x81,0x00};//={0x81,0x00};
-    vector<uint8_t> co_data_frame(msg_start,msg_start+2);
+    uint8_t msg_start[]={0x22,0x64,0x60,0x00,0x0F,0x00,0x00,0x00};//={0x81,0x00};
+    vector<uint8_t> co_data_frame(msg_start,msg_start+8);
     //com.SetCanMsg(can,msg_start);
-    input=com.SetCanOpenMsg(0x00,0,co_data_frame);//0xE05
+    input=com.SetCanOpenMsg(0x601,0,co_data_frame);//0xE05
     //com.SetCanMsg(can,msg_start);
     //com.co2c(input,can);
 
