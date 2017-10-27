@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     co_data_frame = vector<uint8_t>(msg_start2,msg_start2+2);
     com.SendMessage(com.SetCanOpenMsg(0x00,0,co_data_frame),0);
     com.WaitForReadMessage(output,0);
-    com.WaitForReadMessage(output,0);
+    //com.WaitForReadMessage(output,0);
     //com.WaitForReadMessage(output,0);
 
     sleep(1);
